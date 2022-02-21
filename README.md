@@ -687,3 +687,75 @@ int main()<br>
 	
 **OUTPUT:**
 ![image](https://user-images.githubusercontent.com/97970956/154902753-e9b87ef5-1150-4a05-b205-697fdada90c8.png)
+	
+**5. Write a c++ program to stack using array**
+
+//STACK USING ARRAY
+#include <iostream><br>
+using namespace std;<br>
+int stack[100], n=100, top=-1;<br>
+void push(int val) {<br>
+   if(top>=n-1)<br>
+   cout<<"Stack Overflow"<<endl;<br>
+   else {<br>
+      top++;<br>
+      stack[top]=val;<br>
+   }<br>
+}<br>
+void pop() {<br>
+   if(top<=-1)<br>
+   cout<<"Stack Underflow"<<endl;<br>
+   else {<br>
+      cout<<"The popped element is "<< stack[top] <<endl;<br>
+      top--;<br>
+   }<br>
+}<br>
+void display() {<br>
+   if(top>=0) {<br>
+      cout<<"Stack elements are:";<br>
+      for(int i=top; i>=0; i--)<br>
+      cout<<stack[i]<<" ";<br>
+      cout<<endl;<br>
+   } else<br>
+   cout<<"Stack is empty";<br>
+}<br>
+int main() {<br>
+   int ch, val;<br>
+   cout<<"1) Push in stack"<<endl;<br>
+   cout<<"2) Pop from stack"<<endl;<br>
+   cout<<"3) Display stack"<<endl;<br>
+   cout<<"4) Exit"<<endl;<br>
+   do {<br>
+      cout<<"Enter choice: "<<endl;<br>
+      cin>>ch;<br>
+      switch(ch) {<br>
+         case 1: {<br>
+            cout<<"Enter value to be pushed:"<<endl;<br>
+            cin>>val;<br>
+            push(val);<br>
+            break;<br>
+         }<br>
+         case 2: {<br>
+            pop();<br>
+            break;<br>
+         }<br>
+         case 3: {<br>
+            display();<br>
+            break;<br>
+         }<br>
+         case 4: {<br>
+            cout<<"Exit"<<endl;<br>
+            break;<br>
+         }<br>
+         default: {<br>
+            cout<<"Invalid Choice"<<endl;<br>
+         }<br>
+      }<br>
+   }while(ch!=4);<br>
+   return 0;<br>
+   }<br>
+	
+**output**
+	
+![image](https://user-images.githubusercontent.com/97970956/154904414-6cf033f6-4777-4bd0-bfd4-d78e7188b143.png)
+	
