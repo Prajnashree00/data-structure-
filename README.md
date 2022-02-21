@@ -624,3 +624,40 @@ int main(){<br>
 return 0;<br>
 }<br>
   ![image](https://user-images.githubusercontent.com/97970956/154896425-f23f4095-f13f-4b61-a02f-f0fcfbec5814.png)
+	
+	**
+3.write a  c++ program to implement addition of 2 arrays?** 
+#include<iostream><br>
+using namespace std;<br>
+int main()<br>
+{
+	int size, i, arr1[10], arr2[10], add[10];<br>
+	
+	cout << "\nPlease Enter the Array Size =  ";<br>
+	cin >> size;<br>
+	
+	cout << "\nPlease Enter the First Array Items =  ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cin >> arr1[i];<br>
+	}	<br>
+	cout << "\nPlease Enter the Second Array Items =  ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cin >> arr2[i];<br>
+	}
+	for(i = 0; i < size; i++)<br>
+	{
+		add[i] = arr1[i] + arr2[i];<br>
+		cout << arr1[i] << " + " << arr2[i] << " = " << add[i] << "\n";<br>
+	}
+	cout << "\nThe Final Result of adding 2 One Dimensional Arrays = ";<br>
+	for(i = 0; i < size; i++)<br>
+	{<br>
+		cout << add[i] << " ";<br>
+	}<br>
+return 0;<br>
+}<br>
+**OUTPUT**:
+	![image](https://user-images.githubusercontent.com/97970956/154900753-8296c7a8-3b8a-41f9-87d3-5866694e1331.png)
+
