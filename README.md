@@ -660,5 +660,6 @@ return 0;<br>
 }<br>
 
 	**OUTPUT**:
-	![image](https://user-images.githubusercontent.com/97970956/154900753-8296c7a8-3b8a-41f9-87d3-5866694e1331.png)
+	![image](https://user-images.githubusercontent.com/97970956/154901369-64cc1cd1-9e86-446f-96b3-9bb16f488e2a.png)
 
+	
