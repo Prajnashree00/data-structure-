@@ -574,7 +574,6 @@ int main(){<br>
 	for(i=0;i<n;i++){<br>
 		cin>>ele;<br>
 		insert(ele);<br>
-		
 	}<br>
 	cout<<"\n list of elements"<<endl;<br>
 	Node*t;<br>
@@ -598,10 +597,9 @@ int main(){<br>
 			sHead=tN;<br>
 			temp->next=NULL;<br>
 			break;<br>
-		
-		}temp=temp->next;<br>
-		
-	}
+		}
+	temp=temp->next;<br>
+		}
 	temp=head;<br>
 	if(temp==NULL){<br>
 		cout<<"\nFirst list is empty"<<endl;<br>
@@ -621,7 +619,7 @@ int main(){<br>
 				
 			cout<<temp->value<<"\t";<br>
 			temp=temp->next;<br>
-		}<br>
+	}<br>
 }<br>
 return 0;<br>
 }<br>
