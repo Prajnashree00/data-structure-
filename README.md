@@ -760,37 +760,37 @@ int main() {<br>
 ![image](https://user-images.githubusercontent.com/97970956/154904414-6cf033f6-4777-4bd0-bfd4-d78e7188b143.png)
 	
 **6.write c++ program implememnt the binary search**
-	#include<iostream>
-using namespace std;
-int main()
-{
-    int i, arr[10], num, first, last, middle;
-    cout<<"Enter 10 Elements (in ascending order): ";
-    for(i=0; i<10; i++)
-        cin>>arr[i];
-    cout<<"\nEnter Element to be Search: ";
-    cin>>num;
-    first = 0;
-    last = 9;
-    middle = (first+last)/2;
-    while(first <= last)
-    {
-        if(arr[middle]<num)
-            first = middle+1;
-        else if(arr[middle]==num)
+	#include<iostream><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+    int i, arr[10], num, first, last, middle;<br>
+    cout<<"Enter 10 Elements (in ascending order): ";<br>
+    for(i=0; i<10; i++)<br>
+        cin>>arr[i];<br>
+    cout<<"\nEnter Element to be Search: ";<br>
+    cin>>num;<br>
+    first = 0;<br>
+    last = 9;<br>
+    middle = (first+last)/2;<br>
+    while(first <= last)<br>
+    {<br>
+        if(arr[middle]<num)<br>
+            first = middle+1;<br>
+        else if(arr[middle]==num)<br>
         {
-            cout<<"\nThe number, "<<num<<" found at Position "<<middle+1;
-            break;
+            cout<<"\nThe number, "<<num<<" found at Position "<<middle+1;<br>
+            break;<br>
         }
-        else
-            last = middle-1;
-        middle = (first+last)/2;
+        else<br>
+            last = middle-1;<br>
+        middle = (first+last)/2;<br>
     }
-    if(first>last)
-        cout<<"\nThe number, "<<num<<" is not found in given Array";
-    cout<<endl;
-    return 0;
-}
+    if(first>last)<br>
+        cout<<"\nThe number, "<<num<<" is not found in given Array";<br>
+    cout<<endl;<br>
+    return 0;<br>
+}<br>
 	
 **output**
 	
