@@ -666,3 +666,24 @@ return 0;<br>
 ![image](https://user-images.githubusercontent.com/97970956/154901523-bb84c5cb-4bf5-419e-98b7-4020828104bc.png)
 
 	
+**4.Write a c++ program to implememnt reverse order of he array element **
+#include<iostream><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+    int arr[10], i;<br>
+    cout<<"Enter 10 Array Elements: ";<br>
+    for(i=0; i<10; i++)<br>
+        cin>>arr[i];<br>
+    cout<<"\nThe Original Array is:\n";<br>
+    for(i=0; i<10; i++)<br>
+        cout<<arr[i]<<" ";<br>
+    cout<<"\n\nThe Reverse of Given Array is:\n";<br>
+    for(i=(10-1); i>=0; i--)<br>
+        cout<<arr[i]<<" ";<br>
+    cout<<endl;<br>
+    return 0;<br>
+}<br>
+	
+**OUTPUT:**
+![image](https://user-images.githubusercontent.com/97970956/154902753-e9b87ef5-1150-4a05-b205-697fdada90c8.png)
