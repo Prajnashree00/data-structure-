@@ -548,81 +548,81 @@ void single_llist::display() <br>
 2. Write a C++ program to split the linked list into two halves such that the element ‘e’ should be the first element of second list.
  
   
-  #include<iostream>
-using namespace std;
-struct Node{
-	int value;
-	struct Node*next;
-};
-struct Node*head=NULL;
-struct Node*sHead=NULL;
-struct Node*temp=NULL;
-void insert(int new_data){
-	struct Node*new_node=new Node();//(struct Node*)nalloc(sizeof(structNode));
-	new_node->value=new_data;
-	new_node->next=head;
-	head=new_node;
-}
-int n;
-int ele;
-int splitIndex;
-int main(){
-	int i;
-	cout<<"Enter number of elements you want in the list\t";
-	cin>>n;
-	cout<<"enter the elements:"<<endl;
-	for(i=0;i<n;i++){
-		cin>>ele;
-		insert(ele);
+  #include<iostream><br>
+using namespace std;<br>
+struct Node{<br>
+	int value;<br>
+	struct Node*next;<br>
+};<br>
+struct Node*head=NULL;<br>
+struct Node*sHead=NULL;<br>
+struct Node*temp=NULL;<br>
+void insert(int new_data){<br>
+	struct Node*new_node=new Node();//(struct Node*)nalloc(sizeof(structNode));<br>
+	new_node->value=new_data;<br>
+	new_node->next=head;<br>
+	head=new_node;<br>
+}<br>
+int n;<br>
+int ele;<br>
+int splitIndex;<br>
+int main(){<br>
+	int i;<br>
+	cout<<"Enter number of elements you want in the list\t";<br>
+	cin>>n;<br>
+	cout<<"enter the elements:"<<endl;<br>
+	for(i=0;i<n;i++){<br>
+		cin>>ele;<br>
+		insert(ele);<br>
 		
-	}
-	cout<<"\n list of elements"<<endl;
-	Node*t;
-	t=head;
-	while(t!=NULL){
-		cout<<t->value<<"\t";
-		t=t->next;
-	}
-	cout<<"\n Enter the position you want the list to split";
-	cin>>splitIndex;
-	while(splitIndex<0||splitIndex>n-1){
-		cout<<"Invalid choice,try again"<<endl;
-		cin>>splitIndex;
-	}
-	temp=head;
+	}<br>
+	cout<<"\n list of elements"<<endl;<br>
+	Node*t;<br>
+	t=head;<br>
+	while(t!=NULL){<br>
+		cout<<t->value<<"\t";<br>
+		t=t->next;<br>
+	}<br>
+	cout<<"\n Enter the position you want the list to split";<br>
+	cin>>splitIndex;<br>
+	while(splitIndex<0||splitIndex>n-1){<br>
+		cout<<"Invalid choice,try again"<<endl;<br>
+		cin>>splitIndex;<br>
+	}<br>
+	temp=head;<br>
 	for(i=0;i<=
-	splitIndex;i++){
-		if(i==splitIndex-1){
-			Node*tN;
-			tN=temp->next;
-			sHead=tN;
-			temp->next=NULL;
-			break;
+	splitIndex;i++){<br>
+		if(i==splitIndex-1){<br>
+			Node*tN;<br>
+			tN=temp->next;<br>
+			sHead=tN;<br>
+			temp->next=NULL;<br>
+			break;<br>
 		
-		}temp=temp->next;
+		}temp=temp->next;<br>
 		
 	}
-	temp=head;
-	if(temp==NULL){
-		cout<<"\nFirst list is empty"<<endl;
-		}else{
-			cout<<"\n\n first list element"<<endl;
-			while(temp!=NULL){
-				cout<<temp->value<<"\t";
-				temp=temp->next;
+	temp=head;<br>
+	if(temp==NULL){<br>
+		cout<<"\nFirst list is empty"<<endl;<br>
+		}else{<br>
+			cout<<"\n\n first list element"<<endl;<br>
+			while(temp!=NULL){<br>
+				cout<<temp->value<<"\t";<br>
+				temp=temp->next;<br>
 			}
 		}
-	temp=sHead;
-	if(temp==NULL){
-		cout<<"\n seconmd list is empty"<<endl;
-		}else{
-			cout<<"\n \n second list element"<<endl;
-			while(temp!=NULL){
+	temp=sHead;<br>
+	if(temp==NULL){<br>
+		cout<<"\n seconmd list is empty"<<endl;<br>
+		}else{<br>
+			cout<<"\n \n second list element"<<endl;<br>
+			while(temp!=NULL){<br>
 				
-			cout<<temp->value<<"\t";
-			temp=temp->next;
-		}
-}
-return 0;
-}
+			cout<<temp->value<<"\t";<br>
+			temp=temp->next;<br>
+		}<br>
+}<br>
+return 0;<br>
+}<br>
   ![image](https://user-images.githubusercontent.com/97970956/154896425-f23f4095-f13f-4b61-a02f-f0fcfbec5814.png)
