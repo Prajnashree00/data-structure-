@@ -795,3 +795,88 @@ int main()<br>
 **output**
 	
 ![image](https://user-images.githubusercontent.com/97970956/154905058-42e3717b-ba9c-43c3-94c5-07de98c4821e.png)
+
+**Write a program to adding 10 number by using switch statement**
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int ch,val;
+	cout<<"1.adding 10 numbers using for"<<endl;
+	cout<<"2.adding 10 numbers using while"<<endl;
+	cout<<"3.adding 10 numbers using do while"<<endl;
+	cout<<"4.exit"<<endl;
+	do{
+		cout<<"enter a choice "<<endl;
+		cin>>ch;
+		switch(ch)
+		{
+			case 1:
+				{
+					int num, sum=0;
+
+  						 cout<<"Please enter 10 numbers:"<<endl;
+
+
+ 						 for(int i=0; i<10; i++)
+ 							 {
+ 						  // input is stored in num
+   							 cin>>num;
+
+   							// adding 10 numbers
+   								 sum=sum+num;
+							  }
+  							  cout << "\n The sum of 10 numbers is: "<<sum << endl;
+  							  break;
+				}
+			case 2:
+				{
+					int n, i=0, num, sum=0;
+   					 cout<<"Enter the value of n: ";
+  					  cin>>n;
+   					 cout<<"Enter "<<n<<" numbers: ";\
+    
+   					 while(i<n)
+    					{
+   				     		cin>>num;
+      				 		 sum = sum+num;
+        					i++;
+    					}
+    
+   					 cout<<"\nSum = "<<sum;
+ 					   cout<<endl;
+ 					   break;
+				}
+				case 3: 
+				{
+					int i=0,sum=0,num,n;
+					cout<<"enter the value for n";
+					cin>>n;
+					cout<<"enter the 10 elements"<<endl;
+					do 
+					{
+						cin>>num;
+						sum=sum+num;
+						i++;
+					}
+					while(i<n);
+						cout<<"sum="<<sum;
+						break;					
+					
+					}
+					case 4:
+					{
+					
+						cout<<"exit";
+						break;
+					}
+					default:
+					cout<<"invalid choice"<<endl;
+		}
+	}
+	while(ch!=4);
+	return 0;
+	}
+	
+  ![image](https://user-images.githubusercontent.com/97970956/155065277-1eb33497-3346-4b98-8f79-040d6698cb20.png)
