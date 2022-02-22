@@ -799,84 +799,434 @@ int main()<br>
 **Write a program to adding 10 number by using switch statement**
 
 #include<iostream><br>
-using namespace std;
-int main()
-{
-	int ch,val;
-	cout<<"1.adding 10 numbers using for"<<endl;
-	cout<<"2.adding 10 numbers using while"<<endl;
-	cout<<"3.adding 10 numbers using do while"<<endl;
-	cout<<"4.exit"<<endl;
-	do{
-		cout<<"enter a choice "<<endl;
-		cin>>ch;
-		switch(ch)
-		{
-			case 1:
-				{
-					int num, sum=0;
-
-  						 cout<<"Please enter 10 numbers:"<<endl;
-
-
- 						 for(int i=0; i<10; i++)
- 							 {
- 						  // input is stored in num
-   							 cin>>num;
-
-   							// adding 10 numbers
-   								 sum=sum+num;
-							  }
-  							  cout << "\n The sum of 10 numbers is: "<<sum << endl;
-  							  break;
-				}
-			case 2:
-				{
-					int n, i=0, num, sum=0;
-   					 cout<<"Enter the value of n: ";
-  					  cin>>n;
-   					 cout<<"Enter "<<n<<" numbers: ";\
+using namespace std;<br>
+int main()<br>
+{<br>
+	int ch,val;<br>
+	cout<<"1.adding 10 numbers using for"<<endl;<br>
+	cout<<"2.adding 10 numbers using while"<<endl;<br>
+	cout<<"3.adding 10 numbers using do while"<<endl;<br>
+	cout<<"4.exit"<<endl;<br>
+	do{<br>
+		cout<<"enter a choice "<<endl;<br>
+		cin>>ch;<br>
+		switch(ch)<br>
+		{<br>
+			case 1:<br>
+				{<br>
+				int num, sum=0;<br>
+  				cout<<"Please enter 10 numbers:"<<endl;<br>
+				for(int i=0; i<10; i++)<br>
+ 				 {
+ 				 	 // input is stored in num<br>
+   					 cin>>num;<br>
+   					// adding 10 numbers<br>
+   					sum=sum+num;<br>
+				 }
+  				cout << "\n The sum of 10 numbers is: "<<sum << endl;<br>
+  				break;<br>
+				}<br>
+			case 2:<br>
+				{<br>
+					int n, i=0, num, sum=0;<br>
+   					 cout<<"Enter the value of n: ";<br>
+  					  cin>>n;<br>
+   					 cout<<"Enter "<<n<<" numbers: ";<br>
     
-   					 while(i<n)
-    					{
-   				     		cin>>num;
-      				 		 sum = sum+num;
-        					i++;
-    					}
+   					 while(i<n)<br>
+    					{<br>
+   				     		cin>>num;<br>
+      				 		 sum = sum+num;<br>
+        					i++;<br>
+    					}<br>
     
-   					 cout<<"\nSum = "<<sum;
- 					   cout<<endl;
- 					   break;
+   					 cout<<"\nSum = "<<sum;<br>
+ 					   cout<<endl;<br>
+ 					   break;<br>
 				}
-				case 3: 
+				case 3: <br>
 				{
-					int i=0,sum=0,num,n;
-					cout<<"enter the value for n";
-					cin>>n;
-					cout<<"enter the 10 elements"<<endl;
-					do 
+					int i=0,sum=0,num,n;<br>
+					cout<<"enter the value for n";<br>
+					cin>>n;<br>
+					cout<<"enter the 10 elements"<<endl;<br>
+					do <br>
 					{
-						cin>>num;
-						sum=sum+num;
-						i++;
-					}
-					while(i<n);
-						cout<<"sum="<<sum;
-						break;					
+						cin>>num;<br>
+						sum=sum+num;<br>
+						i++;<br>
+					}<br>
+					while(i<n);<br>
+						cout<<"sum="<<sum;<br>
+						break;	<br>				
 					
-					}
-					case 4:
-					{
+					}<br>
+					case 4:<br>
+					{<br>
 					
-						cout<<"exit";
-						break;
-					}
-					default:
+						cout<<"exit";<br>
+						break;<br>
+					}<br>
+					default:<br>
 					cout<<"invalid choice"<<endl;
-		}
-	}
-	while(ch!=4);
-	return 0;
-	}
+		}<br>
+	}<br>
+	while(ch!=4);<br>
+	return 0;<br>
+	}<br>
 	
   ![image](https://user-images.githubusercontent.com/97970956/155065277-1eb33497-3346-4b98-8f79-040d6698cb20.png)
+**Write a C++ program to implement BST to support the following operations
+Assume no duplicate elements while constructing the BST
+1.Given a key perform a search in the BST, if the key is found then display “key found”
+2.Insert an element into a BST
+3.Delete an element from a BST
+Display the tree using Inorder,Preorder and Postorder traversal methods
+**
+# include <iostream> 
+# include <cstdlib> 
+using namespace std; 
+struct node 
+{ 
+ int info; 
+ struct node *left; 
+ struct node *right; 
+}*root; 
+class BST 
+{ 
+ public: 
+ void find(int, node **, node **); 
+ void insert(node *, node *); 
+ void del(int); 
+ void case_a(node *,node *); 
+ void case_b(node *,node *); 
+ void case_c(node *,node *); 
+ void preorder(node *); 
+ void inorder(node *); 
+ void postorder(node *); 
+ void display(node *, int); 
+ BST() 
+ { 
+ root = NULL; 
+ } 
+}; 
+int main() 
+{ 
+ int choice, num; 
+ BST bst; 
+ node *temp; 
+ while (1) 
+ { 
+ cout<<"-----------------"<<endl; 
+ cout<<"Operations on BST"<<endl; 
+ cout<<"-----------------"<<endl; 
+ cout<<"1.Insert Element "<<endl; 
+ cout<<"2.Delete Element "<<endl; 
+ cout<<"3.Inorder Traversal"<<endl; 
+ cout<<"4.Preorder Traversal"<<endl; 
+ cout<<"5.Postorder Traversal"<<endl; 
+ cout<<"6.Display"<<endl; 
+ cout<<"7.Quit"<<endl; 
+ cout<<"Enter your choice : "; 
+ cin>>choice; 
+ switch(choice) 
+ { 
+ case 1: 
+ temp = new node; 
+ cout<<"Enter the number to be inserted : "; 
+ cin>>temp->info; 
+ bst.insert(root, temp); 
+ break; 
+ case 2: 
+ if (root == NULL) 
+ { 
+ cout<<"Tree is empty, nothing to delete"<<endl; 
+ continue; 
+ } 
+ cout<<"Enter the number to be deleted : "; 
+ cin>>num; 
+ bst.del(num); 
+ break; 
+ case 3: 
+ cout<<"Inorder Traversal of BST:"<<endl; 
+ bst.inorder(root); 
+ cout<<endl; 
+ break; 
+ case 4: 
+ cout<<"Preorder Traversal of BST:"<<endl; 
+ bst.preorder(root); 
+ cout<<endl; 
+ break; 
+ case 5: 
+ cout<<"Postorder Traversal of BST:"<<endl; 
+ bst.postorder(root); 
+ cout<<endl; 
+ break; 
+ case 6: 
+ cout<<"Display BST:"<<endl; 
+ bst.display(root,1); 
+ cout<<endl; 
+ break; 
+ case 7: 
+ exit(1); 
+ default: 
+ cout<<"Wrong choice"<<endl; 
+ } 
+ } 
+} 
+void BST::find(int item, node **par, node **loc) 
+{ 
+ node *ptr, *ptrsave; 
+ if (root == NULL) 
+ { 
+ *loc = NULL; 
+ *par = NULL; 
+ return; 
+ } 
+ if (item == root->info) 
+ { 
+ *loc = root; 
+ *par = NULL; 
+ return; 
+ } 
+ if (item < root->info) 
+ ptr = root->left; 
+ else 
+ ptr = root->right; 
+ ptrsave = root; 
+ while (ptr != NULL) 
+ { 
+ if (item == ptr->info) 
+ { 
+ *loc = ptr; 
+ *par = ptrsave; 
+ return; 
+ } 
+ ptrsave = ptr; 
+ if (item < ptr->info) 
+ ptr = ptr->left; 
+ else 
+ ptr = ptr->right; 
+ } 
+ *loc = NULL; 
+ *par = ptrsave; 
+} 
+
+void BST::insert(node *tree, node *newnode) 
+{ 
+ if (root == NULL) 
+ { 
+ root = new node; 
+ root->info = newnode->info; 
+ root->left = NULL; 
+ root->right = NULL; 
+ cout<<"Root Node is Added"<<endl; 
+ return; 
+ } 
+ if (tree->info == newnode->info) 
+ { 
+ cout<<"Element already in the tree"<<endl; 
+ return; 
+ } 
+ if (tree->info > newnode->info) 
+ { 
+ if (tree->left != NULL) 
+ { 
+ insert(tree->left, newnode); 
+ } 
+ else 
+ { 
+ tree->left = newnode; 
+ (tree->left)->left = NULL; 
+ (tree->left)->right = NULL; 
+ cout<<"Node Added To Left"<<endl; 
+ return; 
+ } 
+ } 
+ else 
+ { 
+ if (tree->right != NULL) 
+ { 
+ insert(tree->right, newnode); 
+ } 
+ else 
+ { 
+ tree->right = newnode; 
+ (tree->right)->left = NULL; 
+ (tree->right)->right = NULL; 
+ cout<<"Node Added To Right"<<endl; 
+ return; 
+ } 
+ } 
+} 
+
+void BST::del(int item) 
+{ 
+ node *parent, *location; 
+ if (root == NULL) 
+ { 
+ cout<<"Tree empty"<<endl; 
+ return; 
+ } 
+ find(item, &parent, &location); 
+ if (location == NULL) 
+ { 
+ cout<<"Item not present in tree"<<endl; 
+ return; 
+ } 
+ if (location->left == NULL && location->right == NULL) 
+ case_a(parent, location); 
+ if (location->left != NULL && location->right == NULL) 
+ case_b(parent, location); 
+ if (location->left == NULL && location->right != NULL) 
+ case_b(parent, location); 
+ if (location->left != NULL && location->right != NULL) 
+ case_c(parent, location); 
+ free(location); 
+} 
+ 
+
+void BST::case_a(node *par, node *loc ) 
+{ 
+ if (par == NULL) 
+ { 
+ root = NULL; 
+ } 
+ else 
+ { 
+ if (loc == par->left) 
+ par->left = NULL; 
+ else 
+ par->right = NULL; 
+ } 
+} 
+ 
+
+void BST::case_b(node *par, node *loc) 
+{ 
+ node *child; 
+ if (loc->left != NULL) 
+ child = loc->left; 
+ else 
+ child = loc->right; 
+ if (par == NULL) 
+ { 
+ root = child; 
+ } 
+ else 
+ { 
+ if (loc == par->left) 
+ par->left = child; 
+ else 
+ par->right = child; 
+ } 
+} 
+ 
+
+void BST::case_c(node *par, node *loc) 
+{ 
+ node *ptr, *ptrsave, *suc, *parsuc; 
+ ptrsave = loc; 
+ ptr = loc->right; 
+ while (ptr->left != NULL) 
+ { 
+ ptrsave = ptr; 
+ ptr = ptr->left; 
+ } 
+ suc = ptr; 
+ parsuc = ptrsave; 
+ if (suc->left == NULL && suc->right == NULL) 
+ case_a(parsuc, suc); 
+ else 
+ case_b(parsuc, suc); 
+ if (par == NULL) 
+ { 
+ root = suc; 
+ } 
+ else 
+ { 
+ if (loc == par->left) 
+ par->left = suc; 
+ else 
+ par->right = suc; 
+ } 
+ suc->left = loc->left; 
+ suc->right = loc->right; 
+} 
+ 
+ 
+void BST::preorder(node *ptr) 
+{ 
+ if (root == NULL) 
+ { 
+ cout<<"Tree is empty"<<endl; 
+ return; 
+ } 
+ if (ptr != NULL) 
+ { 
+ cout<<ptr->info<<" "; 
+ preorder(ptr->left); 
+ preorder(ptr->right); 
+ } 
+} 
+
+void BST::inorder(node *ptr) 
+{ 
+ if (root == NULL) 
+ { 
+ cout<<"Tree is empty"<<endl; 
+ return; 
+ } 
+ if (ptr != NULL) 
+ { 
+ inorder(ptr->left); 
+ cout<<ptr->info<<" "; 
+ inorder(ptr->right); 
+ } 
+} 
+ 
+void BST::postorder(node *ptr) 
+{ 
+ if (root == NULL) 
+ { 
+ cout<<"Tree is empty"<<endl; 
+ return; 
+ } 
+ if (ptr != NULL) 
+ { 
+ postorder(ptr->left); 
+ postorder(ptr->right); 
+ cout<<ptr->info<<" "; 
+ } 
+} 
+ 
+void BST::display(node *ptr, int level) 
+{ 
+ int i; 
+ if (ptr != NULL) 
+ { 
+ display(ptr->right, level+1); 
+ cout<<endl; 
+ if (ptr == root) 
+ cout<<"Root->: "; 
+ else 
+ { 
+ for (i = 0;i < level;i++) 
+ cout<<" "; 
+ } 
+ cout<<ptr->info; 
+ display(ptr->left, level+1); 
+ } 
+}
+
+**OUTPUT:**
+![image](https://user-images.githubusercontent.com/97970956/155076069-0d1a9118-7493-4291-b47e-19315efc3362.png)
+![image](https://user-images.githubusercontent.com/97970956/155076165-f683b6ae-a494-495e-8513-8e7f7201e159.png)
+![image](https://user-images.githubusercontent.com/97970956/155076253-d7fab92f-1750-42d4-bbfd-0c13edc818c2.png)
+![image](https://user-images.githubusercontent.com/97970956/155076362-4dc33813-c147-458a-914f-1248cfef5005.png)
+![image](https://user-images.githubusercontent.com/97970956/155076431-483339c8-f502-4c7a-a36c-e2a281f478aa.png)
+
+
+
+	
+	
