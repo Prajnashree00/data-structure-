@@ -1227,6 +1227,102 @@ void BST::display(node *ptr, int level) <br>
 ![image](https://user-images.githubusercontent.com/97970956/155076362-4dc33813-c147-458a-914f-1248cfef5005.png)
 ![image](https://user-images.githubusercontent.com/97970956/155076431-483339c8-f502-4c7a-a36c-e2a281f478aa.png)
 
+**write  a program to implement the min heap**<br>
+#include <iostream><br>
+#include <conio.h><br>
+using namespace std;<br>
+void min_heap(int *a, int m, int n){<br>
+   int j, t;<br>
+   t= a[m];<br>
+   j = 2 * m;<br>
+   while (j <= n) {<br>
+      if (j < n && a[j+1] < a[j])<br>
+         j = j + 1;<br>
+      if (t < a[j])<br>
+         break;<br>
+      else if (t >= a[j]) {<br>
+         a[j/2] = a[j];<br>
+         j = 2 * j;<br>
+      }<br>
+   }<br>
+   a[j/2] = t;<br>
+   return;<br>
+}<br>
+void build_minheap(int *a, int n) {<br>
+   int k;<br>
+   for(k = n/2; k >= 1; k--) {<br>
+      min_heap(a,k,n);<br>
+   }<br>
+}<br>
+int main() {<br>
+   int n, i;<br>
+   cout<<"enter no of elements of array\n";<br>
+   cin>>n;<br>
+   int a[30];<br>
+   for (i = 1; i <= n; i++) {<br>
+      cout<<"enter element"<<" "<<(i)<<endl;<br>
+      cin>>a[i];<br>
+   }<br>
+   build_minheap(a, n);<br>
+   cout<<"Min Heap\n";<br>
+   for (i = 1; i <= n; i++) {<br>
+      cout<<a[i]<<endl;<br>
+   }<br>
+   getch();<br>
+}<br>
+
+
+![image](https://user-images.githubusercontent.com/97970956/155929437-3949781f-ba2e-4f9b-b577-68d3d789c600.png)
+
+**Write a program to implement the maximum heap**
+#include <iostream><br>
+#include <conio.h><br>
+using namespace std;<br>
+void min_heap(int *a, int m, int n){<br>
+   int j, t;<br>
+   t= a[m];<br>
+   j = 2 * m;<br>
+   while (j <= n) {<br>
+      if (j < n && a[j+1] < a[j])<br>
+         j = j + 1;<br>
+      if (t < a[j])<br>
+         break;<br>
+      else if (t >= a[j]) {<br>
+         a[j/2] = a[j];<br>
+         j = 2 * j;<br>
+      }<br>
+   }<br>
+   a[j/2] = t;<br>
+   return;<br>
+}<br>
+void build_minheap(int *a, int n) {<br>
+   int k;<br>
+   for(k = n/2; k >= 1; k--) {<br>
+      min_heap(a,k,n);<br>
+   }<br>
+}<br>
+int main() {<br>
+   int n, i;<br>
+   cout<<"enter no of elements of array\n";<br>
+   cin>>n;<br>
+   int a[30];<br>
+   for (i = 1; i <= n; i++) {<br>
+      cout<<"enter element"<<" "<<(i)<<endl;<br>
+      cin>>a[i];<br>
+   }<br>
+   build_minheap(a, n);<br>
+   cout<<"Min Heap\n";<br>
+   for (i = 1; i <= n; i++) {<br>
+      cout<<a[i]<<endl;<br>
+   }<br>
+   getch();<br>
+}<br>
+![image](https://user-images.githubusercontent.com/97970956/155930561-e8a13bc4-05eb-4f7c-8156-eab28c33ed56.png)
+
+
+
+
+                                                             
 
 
 	
