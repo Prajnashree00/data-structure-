@@ -545,8 +545,8 @@ void single_llist::display() <br>
 ![image](https://user-images.githubusercontent.com/97970956/154895939-58d73a7a-25e7-4de8-b19a-bcec07d5c48f.png)
 
   
-2. Write a C++ program to split the linked list into two halves such that the element ‘e’ should be the first element of second list.
- 
+**2. Write a C++ program to split the linked list into two halves such that the element ‘e’ should be the first element of second list.
+ **
   
   #include<iostream><br>
 using namespace std;<br>
@@ -666,7 +666,7 @@ return 0;<br>
 ![image](https://user-images.githubusercontent.com/97970956/154901523-bb84c5cb-4bf5-419e-98b7-4020828104bc.png)
 
 	
-**4.Write a c++ program to implememnt reverse order of he array element **
+**4.Write a c++ program to implememnt reverse order of he array element **<br>
 #include<iostream><br>
 using namespace std;<br>
 int main()<br>
@@ -796,7 +796,7 @@ int main()<br>
 	
 ![image](https://user-images.githubusercontent.com/97970956/154905058-42e3717b-ba9c-43c3-94c5-07de98c4821e.png)
 
-**Write a program to adding 10 number by using switch statement**
+**7.Write a program to adding 10 number by using switch statement**
 
 #include<iostream><br>
 using namespace std;<br>
@@ -877,7 +877,7 @@ int main()<br>
 	
   ![image](https://user-images.githubusercontent.com/97970956/155065277-1eb33497-3346-4b98-8f79-040d6698cb20.png)
 
-**Write a C++ program to implement BST to support the following operations
+**8.Write a C++ program to implement BST to support the following operations
 Assume no duplicate elements while constructing the BST
 1.Given a key perform a search in the BST, if the key is found then display “key found”
 2.Insert an element into a BST
@@ -1227,7 +1227,7 @@ void BST::display(node *ptr, int level) <br>
 ![image](https://user-images.githubusercontent.com/97970956/155076362-4dc33813-c147-458a-914f-1248cfef5005.png)
 ![image](https://user-images.githubusercontent.com/97970956/155076431-483339c8-f502-4c7a-a36c-e2a281f478aa.png)
 
-**write  a program to implement the min heap**<br>
+**9.write  a program to implement the min heap**<br>
 #include <iostream><br>
 #include <conio.h><br>
 using namespace std;<br>
@@ -1269,36 +1269,34 @@ int main() {<br>
       cout<<a[i]<<endl;<br>
    }<br>
    getch();<br>
-}<br>
-
+}
 
 ![image](https://user-images.githubusercontent.com/97970956/155929437-3949781f-ba2e-4f9b-b577-68d3d789c600.png)
 
-**Write a program to implement the maximum heap**
+**10.Write a program to implement the maximum heap**<br>
 #include <iostream><br>
-#include <conio.h><br>
-using namespace std;<br>
-void min_heap(int *a, int m, int n){<br>
+using namespace std;<br><br>
+void max_heap(int *a, int m, int n) {<br>
    int j, t;<br>
-   t= a[m];<br>
+   t = a[m];<br>
    j = 2 * m;<br>
    while (j <= n) {<br>
-      if (j < n && a[j+1] < a[j])<br>
+      if (j < n && a[j+1] > a[j])<br>
          j = j + 1;<br>
-      if (t < a[j])<br>
+      if (t > a[j])<br>
          break;<br>
-      else if (t >= a[j]) {<br>
-         a[j/2] = a[j];<br>
+      else if (t <= a[j]) {<br>
+         a[j / 2] = a[j];<br>
          j = 2 * j;<br>
       }<br>
    }<br>
    a[j/2] = t;<br>
    return;<br>
 }<br>
-void build_minheap(int *a, int n) {<br>
+void build_maxheap(int *a,int n) {<br>
    int k;<br>
    for(k = n/2; k >= 1; k--) {<br>
-      min_heap(a,k,n);<br>
+      max_heap(a,k,n);<br>
    }<br>
 }<br>
 int main() {<br>
@@ -1307,17 +1305,18 @@ int main() {<br>
    cin>>n;<br>
    int a[30];<br>
    for (i = 1; i <= n; i++) {<br>
-      cout<<"enter element"<<" "<<(i)<<endl;<br>
+      cout<<"enter elements"<<" "<<(i)<<endl;<br>
       cin>>a[i];<br>
    }<br>
-   build_minheap(a, n);<br>
-   cout<<"Min Heap\n";<br>
+   build_maxheap(a,n);<br>
+   cout<<"Max Heap\n";<br>
    for (i = 1; i <= n; i++) {<br>
       cout<<a[i]<<endl;<br>
    }<br>
-   getch();<br>
 }<br>
-![image](https://user-images.githubusercontent.com/97970956/155930561-e8a13bc4-05eb-4f7c-8156-eab28c33ed56.png)
+
+![image](https://user-images.githubusercontent.com/97970956/155931472-5f140705-f1e1-4688-946c-2e9fabf1cd83.png)
+
 
 
 
