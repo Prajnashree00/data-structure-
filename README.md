@@ -787,8 +787,7 @@ int main()<br>
 	
 ![image](https://user-images.githubusercontent.com/97970956/154905058-42e3717b-ba9c-43c3-94c5-07de98c4821e.png)
 
-**7.Write a program to adding 10 number by using switch statement**
-
+**7.Write a program to adding 10 number by using switch statement**<br>
 #include<iostream><br>
 using namespace std;<br>
 int main()<br>
@@ -803,20 +802,20 @@ int main()<br>
 		cin>>ch;<br>
 		switch(ch)<br>
 		{<br>
-			case 1:<br>
-				{<br>
-				int num, sum=0;<br>
-  				cout<<"Please enter 10 numbers:"<<endl;<br>
-				for(int i=0; i<10; i++)<br>
- 				 {
- 				 	 // input is stored in num<br>
-   					 cin>>num;<br>
-   					// adding 10 numbers<br>
-   					sum=sum+num;<br>
-				 }
-  				cout << "\n The sum of 10 numbers is: "<<sum << endl;<br>
-  				break;<br>
-				}<br>
+		case 1:<br>
+		{<br>
+			int num, sum=0;<br>
+  			cout<<"Please enter 10 numbers:"<<endl;<br>
+			for(int i=0; i<10; i++)<br>
+ 			{
+ 		 	// input is stored in num<br>
+   			cin>>num;<br>
+   			// adding 10 numbers<br>
+   			sum=sum+num;<br>
+			}
+  			cout << "\n The sum of 10 numbers is: "<<sum << endl;<br>
+  			break;<br>
+			}<br>
 			case 2:<br>
 				{<br>
 					int n, i=0, num, sum=0;<br>
