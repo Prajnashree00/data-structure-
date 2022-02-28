@@ -655,7 +655,9 @@ return 0;<br>
 }<br>
 
 **OUTPUT**:
-![image](https://user-images.githubusercontent.com/97970956/154901523-bb84c5cb-4bf5-419e-98b7-4020828104bc.png)
+![image](https://user-images.githubusercontent.com/97970956/154901523-bb84c5cb-4bf5-419e-98b7-4020828104bc.png)<br>
+
+	
 **4.Write a c++ program to implememnt reverse order of he array element **<br>
 #include<iostream><br>
 using namespace std;<br>
