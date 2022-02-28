@@ -615,8 +615,7 @@ int main(){<br>
 		cout<<"\n seconmd list is empty"<<endl;<br>
 		}else{<br>
 			cout<<"\n \n second list element"<<endl;<br>
-			while(temp!=NULL){<br>
-				
+			while(temp!=NULL){<br>	
 			cout<<temp->value<<"\t";<br>
 			temp=temp->next;<br>
 	}<br>
@@ -625,8 +624,7 @@ return 0;<br>
 }<br>
   ![image](https://user-images.githubusercontent.com/97970956/154896425-f23f4095-f13f-4b61-a02f-f0fcfbec5814.png)
 	
-	**
-3.write a  c++ program to implement addition of 2 arrays?** 
+**3.write a  c++ program to implement addition of 2 arrays?** 
 #include<iostream><br>
 using namespace std;<br>
 int main()<br>
