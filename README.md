@@ -818,18 +818,16 @@ int main()<br>
 			}<br>
 			case 2:<br>
 				{<br>
-					int n, i=0, num, sum=0;<br>
-   					 cout<<"Enter the value of n: ";<br>
-  					  cin>>n;<br>
-   					 cout<<"Enter "<<n<<" numbers: ";<br>
-    
-   					 while(i<n)<br>
+				int n, i=0, num, sum=0;<br>
+   				cout<<"Enter the value of n: ";<br>
+  				cin>>n;<br>
+   				cout<<"Enter "<<n<<" numbers: ";<br>
+ 				while(i<n)<br>
     					{<br>
-   				     		cin>>num;<br>
-      				 		 sum = sum+num;<br>
-        					i++;<br>
+   				     	cin>>num;<br>
+      				 	sum = sum+num;<br>
+        				i++;<br>
     					}<br>
-    
    					 cout<<"\nSum = "<<sum;<br>
  					   cout<<endl;<br>
  					   break;<br>
@@ -849,12 +847,10 @@ int main()<br>
 					while(i<n);<br>
 						cout<<"sum="<<sum;<br>
 						break;	<br>				
-					
 					}<br>
 					case 4:<br>
 					{<br>
-					
-						cout<<"exit";<br>
+					cout<<"exit";<br>
 						break;<br>
 					}<br>
 					default:<br>
