@@ -1362,6 +1362,7 @@ int n, i,arr[100];<br>
 	return 0;<br>
 }<br>
 
+![image](https://user-images.githubusercontent.com/97970956/155935572-ee03a268-ba6f-4bef-9ee2-8617dade488c.png)
 
 
 
