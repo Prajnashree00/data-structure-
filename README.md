@@ -547,7 +547,6 @@ void single_llist::display() <br>
   
 **2. Write a C++ program to split the linked list into two halves such that the element ‘e’ should be the first element of second list.
  **
-  
   #include<iostream><br>
 using namespace std;<br>
 struct Node{<br>
@@ -630,10 +629,8 @@ using namespace std;<br>
 int main()<br>
 {
 	int size, i, arr1[10], arr2[10], add[10];<br>
-	
 	cout << "\nPlease Enter the Array Size =  ";<br>
 	cin >> size;<br>
-	
 	cout << "\nPlease Enter the First Array Items =  ";<br>
 	for(i = 0; i < size; i++)<br>
 	{<br>
@@ -657,13 +654,8 @@ int main()<br>
 return 0;<br>
 }<br>
 
-	**OUTPUT**:
-	
-	
-	
+**OUTPUT**:
 ![image](https://user-images.githubusercontent.com/97970956/154901523-bb84c5cb-4bf5-419e-98b7-4020828104bc.png)
-
-	
 **4.Write a c++ program to implememnt reverse order of he array element **<br>
 #include<iostream><br>
 using namespace std;<br>
@@ -687,7 +679,6 @@ int main()<br>
 ![image](https://user-images.githubusercontent.com/97970956/154902753-e9b87ef5-1150-4a05-b205-697fdada90c8.png)
 	
 **5. Write a c++ program to stack using array**
-
 //STACK USING ARRAY
 #include <iostream><br>
 using namespace std;<br>
