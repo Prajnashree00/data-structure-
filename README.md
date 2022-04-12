@@ -1364,7 +1364,7 @@ int n, i,arr[100];<br>
 
 ![image](https://user-images.githubusercontent.com/97970956/155935572-ee03a268-ba6f-4bef-9ee2-8617dade488c.png)
 
-**Find the subset of given set s={s,s1,s2,s3,.....sn} of n positive integer whose sum is equal to a given positive integer d **
+**12.Find the subset of given set s={s,s1,s2,s3,.....sn} of n positive integer whose sum is equal to a given positive integer d **
 #include <iostream><br>
 using namespace std;<br>
 void displaySubset(int subSet[], int size) <br>
@@ -1410,68 +1410,67 @@ int main() <br>
 OUTPUT:
 ![image](https://user-images.githubusercontent.com/97970956/157186946-dec4a5ad-b19e-4e8f-8a8f-963bd55a487b.png)<br>
 
-**WAP to store k keys into an array of size n at the location computed using a hash function, loc = key % n, where k<=n and Key takes values from [1 to m], m>n. Handle the collision using Linear probing technique**
-//8.Write a program to store k keys into an array of size n at the location compute using a hash function, loc=key%n, where k<=n and  key takes values from [1 to m], m>n. Handle the collision using Linear Probing technique.
-#include<iostream>
-#include<limits.h>
-using namespace std;
-void Insert(int ary[],int hFn, int Size)
-{
-    int element,pos,n=0;
-	cout<<"Enter key element to insert\n";
-	cin>>element;
-	pos = element%hFn; 
-while(ary[pos]!= INT_MIN) 
-	{  
-			if(ary[pos]== INT_MAX)
-            break;
-				pos = (pos+1)%hFn;
-				n++;
-			if(n==Size)
-            break;     
-	}
-		if(n==Size)
-        	cout<<"Hash table was full of elements\nNo Place to insert this element\n\n";
-		else
-        	ary[pos] = element;    
+**13.WAP to store k keys into an array of size n at the location computed using a hash function, loc = key % n, where k<=n and Key takes values from [1 to m], m>n. Handle the collision using Linear probing technique**<br>
+#include<iostream><br>
+#include<limits.h><br>
+using namespace std;<br>
+void Insert(int ary[],int hFn, int Size)<br>
+{<br>
+    int element,pos,n=0;<br>
+	cout<<"Enter key element to insert\n";<br>
+	cin>>element;<br>
+	pos = element%hFn; <br>
+while(ary[pos]!= INT_MIN) <br><br>
+	{ <br> 
+			if(ary[pos]== INT_MAX)<br>
+            break;<br>
+				pos = (pos+1)%hFn;<br>
+				n++;<br>
+			if(n==Size)<br>
+            break; <br>    
+	}<br>
+		if(n==Size)<br>
+        	cout<<"Hash table was full of elements\nNo Place to insert this element\n\n";<br>
+		else<br>
+        	ary[pos] = element; <br>   
+}<br>
+void display(int ary[],int Size)<br>
+{<br>
+		int i;<br>
+			cout<<"Index\tValue\n";<br>
+		for(i=0;i<Size;i++)<br>
+			cout<<i<<"\t"<<ary[i]<<"\n";<br>
 }
-void display(int ary[],int Size)
-{
-		int i;
-			cout<<"Index\tValue\n";
-		for(i=0;i<Size;i++)
-			cout<<i<<"\t"<<ary[i]<<"\n";
-}
-int main()
-{
-		int Size,hFn,i,choice;
-		cout<<"Enter size of hash table\n";
-		cin>>Size;
-		hFn=Size;
-		int ary[Size];
-		for(i=0;i<Size;i++)
-        ary[i]=INT_MIN; 
-	do
-{
-		cout<<"Enter your choice\n";
-		cout<<" 1-> Insert\n 2-> Display\n 0-> Exit\n";
-		cin>>choice;
-		switch(choice)
-	{
-		case 1:
-		Insert(ary,hFn,Size);
-		break;
-		case 2:
-		display(ary,Size);
-		break;
-		default:
-		cout<<"Enter correct choice\n";
-		break;
-	}
-}	
-while(choice);
-	return 0;
-}
+int main()<br>
+{<br>
+		int Size,hFn,i,choice;<br>
+		cout<<"Enter size of hash table\n";<br>
+		cin>>Size;<br>
+		hFn=Size;<br>
+		int ary[Size];<br>
+		for(i=0;i<Size;i++)<br>
+        ary[i]=INT_MIN; <br>
+	do<br>
+{<br>
+		cout<<"Enter your choice\n";<br>
+		cout<<" 1-> Insert\n 2-> Display\n 0-> Exit\n";<br>
+		cin>>choice;<br>
+		switch(choice)<br>
+	{<br>
+		case 1:<br>
+		Insert(ary,hFn,Size);<br>
+		break;<br>
+		case 2:<br>
+		display(ary,Size);<br>
+		break;<br>
+		default:<br>
+		cout<<"Enter correct choice\n";<br>
+		break;<br>
+	}<br>
+}<br>	
+while(choice);<br>
+	return 0;<br>
+}<br>
 
 
                                                              
