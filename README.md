@@ -1472,6 +1472,8 @@ while(choice);<br>
 	return 0;<br>
 }<br>
 
+![image](https://user-images.githubusercontent.com/97970956/162889229-da473fd7-960d-4632-99f6-ff41d20d0bc0.png)
+![image](https://user-images.githubusercontent.com/97970956/162889262-57e922c1-55d5-4fbf-a448-867aeabf4cfa.png)
 
                                                              
 
