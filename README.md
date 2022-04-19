@@ -1817,65 +1817,65 @@ void double_llist::add_after(int value, int pos)<br>
 ![image](https://user-images.githubusercontent.com/97970956/163757655-382cc501-1d7f-4e06-82ce-52b99f56d8fe.png)
 ![image](https://user-images.githubusercontent.com/97970956/163757676-07ae6347-4ddf-4e09-930e-54a563b88199.png)
 
-**write a program to implement the N-queue problem**
-#include<iostream>
-using namespace std;
-#define N 4
-void printBoard(int board[N][N])
- {
-   for (int i = 0; i < N; i++) 
-   {
-      for (int j = 0; j < N; j++)
-        cout << board[i][j] << " ";
-        cout << endl;
-   }
-}
-bool isValid(int board[N][N], int row, int col)
- {
-   for (int i = 0; i < col; i++) //check whether there is queen in the left or not
-      if (board[row][i])
-         return false;
-   for (int i=row, j=col; i>=0 && j>=0; i--, j--)
-      if (board[i][j]) //check whether there is queen in the left upper diagonal or not
-         return false;
-   for (int i=row, j=col; j>=0 && i<N; i++, j--)
-      if (board[i][j]) //check whether there is queen in the left lower diagonal or not
-         return false;
-   return true;
-}
-bool solveNQueen(int board[N][N], int col) 
-{
-   if (col >= N) //when N queens are placed successfully
-      return true;
-   for (int i = 0; i < N; i++)
-    { //for each row, check placing of queen is possible or not
-      if (isValid(board, i, col) ) 
-	  {
-         board[i][col] = 1; //if validate, place the queen at place (i, col)
-         if ( solveNQueen(board, col + 1)) //Go for the other columns recursively
-            return true;
-         board[i][col] = 0; //When no place is vacant remove that queen
-      }
-   }
-   return false; //when no possible order is found
-}
-bool checkSolution()
-{
-   int board[N][N];
-   for(int i = 0; i<N; i++)
-   for(int j = 0; j<N; j++)
-   board[i][j] = 0; //set all elements to 0
-   if ( solveNQueen(board, 0) == false ) 
-   { //starting from 0th column
-      cout << "Solution does not exist";
-      return false;
-   }
-   printBoard(board);
-   return true;
-}
-int main() 
-{
-   checkSolution();
-}
-![image](https://user-images.githubusercontent.com/97970956/163924584-af4e6254-34c8-41a2-a9b9-08f904a0a80f.png)
-	
+**write a program to implement the N-queue problem**<br>
+#include<iostream><br><br>
+using namespace std;<br>
+#define N 4<br>
+void printBoard(int board[N][N])<br>
+ {<br>
+   for (int i = 0; i < N; i++)<br> 
+   {<br>
+      for (int j = 0; j < N; j++)<br>
+        cout << board[i][j] << " ";<br>
+        cout << endl;<br>
+   }<br>
+}<br>
+bool isValid(int board[N][N], int row, int col)<br>
+ {<br>
+   for (int i = 0; i < col; i++) //check whether there is queen in the left or not<br>
+      if (board[row][i])<br>
+         return false;<br>
+   for (int i=row, j=col; i>=0 && j>=0; i--, j--)<br><br>
+      if (board[i][j]) //check whether there is queen in the left upper diagonal or not<br><br>
+         return false;<br><br>
+   for (int i=row, j=col; j>=0 && i<N; i++, j--)<br><br>
+      if (board[i][j]) //check whether there is queen in the left lower diagonal or not<br><br>
+         return false;<br><br>
+   return true;<br><br>
+}<br><br>
+bool solveNQueen(int board[N][N], int col) <br><br>
+{<br><br>
+   if (col >= N) //when N queens are placed successfully<br><br>
+      return true;<br><br>
+   for (int i = 0; i < N; i++)<br><br>
+    { //for each row, check placing of queen is possible or not<br><br>
+      if (isValid(board, i, col) ) <br><br>
+	  {<br><br>
+         board[i][col] = 1; //if validate, place the queen at place (i, col)<br><br>
+         if ( solveNQueen(board, col + 1)) //Go for the other columns recursively<br>
+            return true;<br>
+         board[i][col] = 0; //When no place is vacant remove that queen<br>
+      }<br>
+   }<br>
+   return false; //when no possible order is found<br>
+}<br>
+bool checkSolution()<br>
+{<br>
+   int board[N][N];<br>
+   for(int i = 0; i<N; i++)<br>
+   for(int j = 0; j<N; j++)<br>
+   board[i][j] = 0; //set all elements to 0<br>
+   if ( solveNQueen(board, 0) == false ) <br>
+   { //starting from 0th column<br>
+      cout << "Solution does not exist";<br>
+      return false;<br>
+   }<br>
+   printBoard(board);<br>
+   return true;<br>
+}<br>
+int main() <br>
+{<br>
+   checkSolution();<br>
+}<br>
+![image](https://user-images.githubusercontent.com/97970956/163924584-af4e6254-34c8-41a2-a9b9-08f904a0a80f.png)<br>
+	<br>
