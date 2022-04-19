@@ -1829,9 +1829,7 @@ void print(int n) {<br>
 	{
         for (int j = 0;j <= n-1; j++)<br>
 		 {<br>
-            
-                cout <<grid[i][j]<< " ";<br>
-            
+                cout <<grid[i][j]<< " ";<br>            
         }<br>
         cout<<endl;<br>
     }<br>
@@ -1902,13 +1900,13 @@ int main()<br>
         for (int i = 0;i < n;i++) <br>
 		{<br>
             for (int j = 0;j < n;j++) <br>
-			{<br>
+		{<br>
                 grid[i][j] = 0;<br>
-            }<br>
+               }<br>
         }<br>
         bool res = solve(n, 0);<br>
         if(res == false)<br>
-		 	{<br>
+		 {<br>
            		 cout << -1 << endl; //if there is no possible solution<br>
         	} <br>
 		else<br>
