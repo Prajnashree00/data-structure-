@@ -623,49 +623,44 @@ return 0;<br>
 }<br>
   ![image](https://user-images.githubusercontent.com/97970956/154896425-f23f4095-f13f-4b61-a02f-f0fcfbec5814.png)
 
-** **	
-	#include<iostream>
-using namespace std;
-int main()
-{
-	int a[20],i,n,a1[20],a2[20],k1=0,k2=0,pos;
-	cout<<"Enter the size of an array: "<<endl;
-	cin>>n;
-	cout<<"Enter array elements: "<<endl;
-	for(i=0;i<n;i++)
-	{
-	cin>>a[i];
-	}
-	cout<<"Enter the position to split the array into 2"<<endl;
-	cin>>pos;
-	for(i=0;i<n;i++)
-	{
-		if(i<pos)
-		a1[k1++]=a[i];
-		else
-		a2[k2++]=a[i];
-	}
-		cout<<"\nArray elements of array1 \n";
-			for(i=0;i<k1;i++)
-			{
+**splitting array **	
+#include<iostream><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+	int a[20],i,n,a1[20],a2[20],k1=0,k2=0,pos;<br>
+	cout<<"Enter the size of an array: "<<endl;<br>
+	cin>>n;<br>
+	cout<<"Enter array elements: "<<endl;<br>
+	for(i=0;i<n;i++)<br>
+	{<br>
+	cin>>a[i];<br>
+	}<br>
+	cout<<"Enter the position to split the array into 2"<<endl;<br>
+	cin>>pos;<br>
+	for(i=0;i<n;i++)<br>
+	{<br>
+		if(i<pos)<br>
+		a1[k1++]=a[i];<br>
+		else<br>
+		a2[k2++]=a[i];<br>
+	}<br>
+		cout<<"\nArray elements of array1 \n";<br>
+			for(i=0;i<k1;i++)<br>
+			{<br>
 				 
-                cout<<a1[i]<<endl;
-			}
+                cout<<a1[i]<<endl;<br>
+			}<br>
+			cout<<"\nArray elements of array2 \n";<br>
+			for(i=0;i<k2;i++)<br>
+			{<br>	 
+               			cout<<a2[i]<<endl;<br>
+			}<br>
+			cout<<"\n";<br>
+			return 0;<br>
+}<br>
 			
-			cout<<"\nArray elements of array2 \n";
-			for(i=0;i<k2;i++)
-			{
-				 
-               cout<<a2[i]<<endl;
-			}
-		
-			cout<<"\n";
-			return 0;
-		}
-			
-
-	
-	
+![image](https://user-images.githubusercontent.com/97970956/165029899-a4371659-c97a-4268-967f-c770f2a40b84.png)
 	
 **3.write a  c++ program to implement addition of 2 arrays?** 
 #include<iostream><br>
@@ -903,7 +898,7 @@ int main()<br>
 	}<br>
 	while(ch!=4);<br>
 	return 0;<br>
-	}<br>
+}<br>
 	
   ![image](https://user-images.githubusercontent.com/97970956/155065277-1eb33497-3346-4b98-8f79-040d6698cb20.png)
 
@@ -1960,3 +1955,53 @@ int main()<br>
   return 0;<br>
 }<br>
 ![image](https://user-images.githubusercontent.com/97970956/163940691-254b372c-1802-470a-8882-2381e3a80aad.png)<br>
+**write a program to find the minimum cost spanning tree of the given undirected graph using prim's algorithm**<br>
+#include <bits/stdc++.h><br>
+using namespace std;<br>
+#define V 5<br>
+int minKey(int key[], bool mstSet[])<br>
+{<br>
+  int min = INT_MAX, min_index;<br>
+  for (int v = 0; v < V; v++)<br>
+   		if (mstSet[v] == false && key[v] < min)<br>
+     		 min = key[v], min_index = v;<br>
+    			return min_index;<br>
+}<br>
+void printMST(int parent[], int graph[V][V])<br>
+{<br>
+	cout<<"Edge \tWeight\n";<br>
+	for (int i = 1; i < V; i++)<br>
+		cout<<parent[i]<<" - "<<i<<" \t"<<graph[i][parent[i]]<<" \n";<br>
+}<br>
+
+void primMST(int graph[V][V])<br>
+{<br>
+	int parent[V];<br>
+	int key[V];<br>
+	bool mstSet[V];<br>
+	for (int i = 0; i < V; i++)<br>
+		key[i] = INT_MAX, mstSet[i] = false;<br>
+		key[0] = 0;<br>
+		parent[0] = -1; // First node is always root of MST<br>
+	for (int count = 0; count < V - 1; count++)<br>
+		{<br>
+			int u = minKey(key, mstSet);<br>
+			mstSet[u] = true;<br>
+			for (int v = 0; v < V; v++)<br>
+			if (graph[u][v] && mstSet[v] == false && graph[u][v] < key[v])<br>
+			parent[v] = u, key[v] = graph[u][v];<br>
+		}<br>		
+printMST(parent, graph);<br>
+}<br>
+int main()<br>
+{<br>
+  	int graph[V][V] = { { 0, 2, 0, 6, 0 },<br>
+	{ 2, 0, 3, 8, 5 },<br>
+	{ 0, 3, 0, 0, 7 },<br>
+	{ 6, 8, 0, 0, 9 },<br>
+	{ 0, 5, 7, 9, 0 } };<br>
+	primMST(graph);<br>
+	return 0;<br>
+}<br>
+![image](https://user-images.githubusercontent.com/97970956/165034702-f7fc73f4-6224-415f-9565-9cb1f9603510.png)
+
